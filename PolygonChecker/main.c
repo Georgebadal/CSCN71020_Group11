@@ -24,6 +24,10 @@ int main() {
 			char* resultTri = analyzeTriangle(triangleSidesPtr[0], triangleSidesPtr[1], triangleSidesPtr[2]);
 			printf("%s\n", resultTri);
 			break;
+		case 2:
+  			printf("Quadrilateral selected.\n");
+   		    runFourPointFeature();
+   	    	break;
 		case 0:
 			continueProgram = false;
 			break;

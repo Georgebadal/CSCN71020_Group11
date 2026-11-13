@@ -54,12 +54,8 @@ static int readNumber(const char *prompt, double *value) {
 }
 
 // Checks if four points form a rectangle
-int analyzeFourPoints(const Point points[4],
-                      FourPointResult *result) {
-
-    double dx[4], dy[4], lengths[4];
-    double perimeter = 0;
-    int rectangle = 1;
+// Returns 1 if successful, 0 if an error occurs (e.g., invalid points)
+int analyzeFourPoints(const Point points[4], FourPointResult *result) {
 
     if (points == NULL || result == NULL) {
         return 0;
@@ -69,37 +65,69 @@ int analyzeFourPoints(const Point points[4],
     result->perimeter = 0;
     result->area = 0;
 
-    // Validate all four points
+    Point ordered[4];
+    double centerX = 0;
+    double centerY = 0;
+
+    // Validate the points and check for duplicates
     for (int i = 0; i < 4; i++) {
 
-        if (!isfinite(points[i].x) ||
-            !isfinite(points[i].y)) {
+        if (!isfinite(points[i].x) || !isfinite(points[i].y)) {
             return 0;
         }
 
-        // Check for duplicate points
         for (int j = 0; j < i; j++) {
-
             if (points[i].x == points[j].x &&
                 points[i].y == points[j].y) {
                 return 0;
             }
         }
+
+        ordered[i] = points[i];
+
+        centerX += points[i].x / 4.0;
+        centerY += points[i].y / 4.0;
     }
 
-    // Connect the four points into lines
+    // Arrange the four points around the center
+    // This allows the points to be entered in any order
+    for (int i = 0; i < 3; i++) {
+
+        for (int j = i + 1; j < 4; j++) {
+
+            double angleI = atan2(
+                ordered[i].y - centerY,
+                ordered[i].x - centerX
+            );
+
+            double angleJ = atan2(
+                ordered[j].y - centerY,
+                ordered[j].x - centerX
+            );
+
+            if (angleI > angleJ) {
+                Point temp = ordered[i];
+                ordered[i] = ordered[j];
+                ordered[j] = temp;
+            }
+        }
+    }
+
+    double dx[4], dy[4], lengths[4];
+    double perimeter = 0;
+
+    // Connect the four points and calculate side lengths
     for (int i = 0; i < 4; i++) {
 
-        int j = (i + 1) % 4;
+        int next = (i + 1) % 4;
 
-        dx[i] = points[j].x - points[i].x;
-        dy[i] = points[j].y - points[i].y;
+        dx[i] = ordered[next].x - ordered[i].x;
+        dy[i] = ordered[next].y - ordered[i].y;
 
         if (!isfinite(dx[i]) || !isfinite(dy[i])) {
             return 0;
         }
 
-        // Calculate the length of each line
         lengths[i] = hypot(dx[i], dy[i]);
 
         if (!isfinite(lengths[i]) || lengths[i] <= 0) {
@@ -113,14 +141,16 @@ int analyzeFourPoints(const Point points[4],
         }
     }
 
-    // Check if all four angles are 90 degrees
+    // Check if all four corners have 90 degree angles
+    int rectangle = 1;
+
     for (int i = 0; i < 4; i++) {
 
-        int j = (i + 1) % 4;
+        int next = (i + 1) % 4;
 
         double dot =
-            (dx[i] / lengths[i]) * (dx[j] / lengths[j]) +
-            (dy[i] / lengths[i]) * (dy[j] / lengths[j]);
+            (dx[i] / lengths[i]) * (dx[next] / lengths[next]) +
+            (dy[i] / lengths[i]) * (dy[next] / lengths[next]);
 
         if (fabs(dot) > TOLERANCE) {
             rectangle = 0;
@@ -131,18 +161,17 @@ int analyzeFourPoints(const Point points[4],
     result->perimeter = perimeter;
     result->isRectangle = rectangle;
 
-    // Calculate area only if it is a rectangle
+    // Calculate area if the shape is a rectangle
     if (rectangle) {
 
-        double area = lengths[0] * lengths[1];
+        result->area = lengths[0] * lengths[1];
 
-        if (!isfinite(area)) {
+        if (!isfinite(result->area)) {
             result->isRectangle = 0;
             result->perimeter = 0;
+            result->area = 0;
             return 0;
         }
-
-        result->area = area;
     }
 
     return 1;
@@ -163,11 +192,12 @@ int runFourPointFeature(void) {
 
             printf("\nPoint %d:\n", i + 1);
 
-            if (!readNumber("Enter X: ", &points[i].x)) {
+            if (!readNumber("Enter X: \n", &points[i].x)) {
                 return 0;
             }
+        
 
-            if (!readNumber("Enter Y: ", &points[i].y)) {
+            if (!readNumber("\nEnter Y: ", &points[i].y)) {
                 return 0;
             }
         }

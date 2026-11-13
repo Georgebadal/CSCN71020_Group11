@@ -49,7 +49,7 @@ int printShapeMenu() {
 	int shapeChoice;
 
 	printf("Enter number: ");
-	scanf_s("%1o", &shapeChoice);
+	scanf("%1o", &shapeChoice);
 
 	return shapeChoice;
 }
@@ -58,7 +58,7 @@ int* getTriangleSides(int* triangleSides) {
 	printf("Enter the three sides of the triangle: ");
 	for (int i = 0; i < 3; i++)
 	{
-		scanf_s("%d", &triangleSides[i]);
+		scanf("%d", &triangleSides[i]);
 	}
 	return triangleSides;
 }

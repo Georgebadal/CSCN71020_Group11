@@ -3,6 +3,8 @@
 
 #include "main.h"
 #include "triangleSolver.h"
+#include "four_points.h"
+
 
 int side = 0;
 
@@ -61,4 +63,13 @@ int* getTriangleSides(int* triangleSides) {
 		scanf("%d", &triangleSides[i]);
 	}
 	return triangleSides;
+}
+
+int* getFourPoints(int* fourPoints) {
+	printf("Enter the four points (x1 y1 x2 y2): ");
+	for (int i = 0; i < 4; i++)
+	{
+		scanf("%d", &fourPoints[i]);
+	}
+	return fourPoints;
 }

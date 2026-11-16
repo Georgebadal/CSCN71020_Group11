@@ -11,7 +11,7 @@
 #define TOLERANCE 1e-9
 
 // Accepts and validates user input
-static int readNumber(const char *prompt, double *value) {
+static int readNumber(const char *prompt, double *value, int num) {
     char input[INPUT_SIZE];
 
     while (1) {
@@ -33,6 +33,17 @@ static int readNumber(const char *prompt, double *value) {
             printf("Input is too long.\n");
             continue;
         }
+
+        if (input[0] == '\n' && num == 0) {
+            printf("Enter X: ");
+            continue;
+        }
+        if (input[0] == '\n') {
+            printf("Enter a valid number. \n");
+            continue;
+        }
+
+    
 
         errno = 0;
         double number = strtod(input, &end);
@@ -191,14 +202,25 @@ int runFourPointFeature(void) {
         for (int i = 0; i < 4; i++) {
 
             printf("\nPoint %d:\n", i + 1);
-
-            if (!readNumber("Enter X: \n", &points[i].x)) {
+            if (i == 0) {
+                if (!readNumber("", &points[i].x, i)) {
                 return 0;
-            }
+                }
         
 
-            if (!readNumber("\nEnter Y: ", &points[i].y)) {
-                return 0;
+                if (!readNumber("Enter Y: ", &points[i].y, i)) {
+                    return 0;
+                }
+            }
+            else {
+                if (!readNumber("Enter X: ", &points[i].x, i)) {
+                    return 0;
+                }
+        
+
+                if (!readNumber("Enter Y: ", &points[i].y, i)) {
+                    return 0;
+                }
             }
         }
 

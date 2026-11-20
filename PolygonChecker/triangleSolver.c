@@ -37,13 +37,13 @@ int getTriangleSideInput(int sideNumber) {
     }
 }
 
-void getAngleInput(int side1, int side2, int side3, int angles[3]) {
-    angles[0] = round(acos((pow(side2, 2) + pow(side3, 2) - pow(side1, 2)) / (2.0 * side2 * side3)) * (180.0 / M_PI));
-    angles[1] = round(acos((pow(side1, 2) + pow(side3, 2) - pow(side2, 2)) / (2.0 * side1 * side3)) * (180.0 / M_PI));
-    angles[2] = round(acos((pow(side1, 2) + pow(side2, 2) - pow(side3, 2)) / (2.0 * side1 * side2)) * (180.0 / M_PI));
+void getAngleInput(int side1, int side2, int side3, float angles[3]) {
+    angles[0] = (acos((pow(side2, 2) + pow(side3, 2) - pow(side1, 2)) / (2.0 * side2 * side3)) * (180.0 / M_PI));
+    angles[1] = (acos((pow(side1, 2) + pow(side3, 2) - pow(side2, 2)) / (2.0 * side1 * side3)) * (180.0 / M_PI));
+    angles[2] = (acos((pow(side1, 2) + pow(side2, 2) - pow(side3, 2)) / (2.0 * side1 * side2)) * (180.0 / M_PI));
 }
 
-void analyzeTriangle(int result[4]) {
+void analyzeTriangle(float result[4]) {
     int sides[3] = { getTriangleSideInput(1), getTriangleSideInput(2), getTriangleSideInput(3) };
     
     if (sides[0] <= 0 || sides[1] <= 0 || sides[2] <= 0 ||
@@ -64,7 +64,7 @@ void analyzeTriangle(int result[4]) {
         result[0] = 4;
     }
 
-    int angles[3];
+    float angles[3];
     getAngleInput(sides[0], sides[1], sides[2], angles);
     for (int i = 0; i < 3; i++) {
         result[i + 1] = angles[i];

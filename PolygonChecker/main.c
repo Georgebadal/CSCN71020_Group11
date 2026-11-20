@@ -18,23 +18,24 @@ int main() {
 		switch (shapeChoice) {
 		case 1:
 			printf("Triangle selected.\n");
-			int result[4];
+			float result[4];
 			analyzeTriangle(result);
-
+			printf("\n");
 			if (result[0] == 1) {
-				printf("Not a triangle.\n");
+				printf("This is not a triangle.\n");
 			}
 			else {
+				printf("This is an ");
 				if (result[0] == 2) {
-					printf("Equilateral triangle.\n");
+					printf("equilateral triangle. ");
 				}
 				else if (result[0] == 3) {
-					printf("Isosceles triangle.\n");
+					printf("isosceles triangle. ");
 				}
 				else if (result[0] == 4) {
-					printf("Scalene triangle.\n");
+					printf("scalene triangle. ");
 				}
-				printf("The angles of the triangle are: %d, %d, %d\n", result[1], result[2], result[3]);
+				printf("\nThe angles of the triangle are: \n1: %.2f \n2: %.2f \n3: %.2f\n", result[1], result[2], result[3]);
 			}
 			break;
 		case 2:

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20261120-1705-Experimental"
+	Name="(empty)"
+	Generator="ctest-4.4.4"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="macOS"
+	Hostname="Georges-MacBook-Pro.local"
+	OSRelease="26.7.3"
+	OSVersion="25G342"
+	OSPlatform="arm64"
+	Is64Bits="1"
+	VendorString="Apple"
+	VendorID="Apple"
+	FamilyID="0"
+	ModelID="0"
+	ModelName="Apple M3 Pro"
+	ProcessorCacheSize="131072"
+	NumberOfLogicalCPU="12"
+	NumberOfPhysicalCPU="12"
+	TotalVirtualMemory="0"
+	TotalPhysicalMemory="18432"
+	LogicalProcessorsPerPhysical="12"
+	ProcessorClockFrequency="0.000000"
+	>
+	<Testing>
+		<StartDateTime>Nov 20 12:10 EST</StartDateTime>
+		<StartTestTime>1795194656</StartTestTime>
+		<TestList/>
+		<EndDateTime>Nov 20 12:10 EST</EndDateTime>
+		<EndTestTime>1795194656</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>

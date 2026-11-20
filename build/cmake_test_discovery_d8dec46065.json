@@ -1,0 +1,179 @@
+{
+  "tests": 31,
+  "name": "AllTests",
+  "testsuites": [
+    {
+      "name": "TriangleTypeTests",
+      "tests": 8,
+      "testsuite": [
+        {
+          "name": "ValidEquilateralTriangle",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 82
+        },
+        {
+          "name": "ValidIsoscelesTriangle",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 86
+        },
+        {
+          "name": "ValidScaleneTriangle",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 90
+        },
+        {
+          "name": "InvalidTriangleSides",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 94
+        },
+        {
+          "name": "TriangleInequalityBoundary",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 98
+        },
+        {
+          "name": "ZeroLengthSide",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 102
+        },
+        {
+          "name": "NegativeSideLength",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 106
+        },
+        {
+          "name": "PositiveSideLength",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 110
+        }
+      ]
+    },
+    {
+      "name": "TriangleAngleTests",
+      "tests": 6,
+      "testsuite": [
+        {
+          "name": "EquilateralTriangleAngles",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 120
+        },
+        {
+          "name": "IsoscelesTriangleAngles",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 130
+        },
+        {
+          "name": "ScaleneTriangleAngles",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 141
+        },
+        {
+          "name": "RightTriangleAngles",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 155
+        },
+        {
+          "name": "AnglesSumTo180",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 165
+        },
+        {
+          "name": "LargestSideHasLargestAngle",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 175
+        }
+      ]
+    },
+    {
+      "name": "FourPointTests",
+      "tests": 17,
+      "testsuite": [
+        {
+          "name": "ValidRectangleInOrder",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 203
+        },
+        {
+          "name": "ValidRectangleOutOfOrder",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 211
+        },
+        {
+          "name": "AllPossiblePointOrders",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 219
+        },
+        {
+          "name": "RotatedRectangle",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 250
+        },
+        {
+          "name": "SquareIsRectangle",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 261
+        },
+        {
+          "name": "NegativeCoordinates",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 269
+        },
+        {
+          "name": "DecimalCoordinates",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 277
+        },
+        {
+          "name": "ParallelogramNotRectangle",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 286
+        },
+        {
+          "name": "TrapezoidNotRectangle",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 303
+        },
+        {
+          "name": "DuplicatePoints",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 316
+        },
+        {
+          "name": "InvalidNaNCoordinate",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 327
+        },
+        {
+          "name": "InfiniteCoordinate",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 340
+        },
+        {
+          "name": "NullPoints",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 353
+        },
+        {
+          "name": "NullResult",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 359
+        },
+        {
+          "name": "CollinearPointsNotRectangle",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 367
+        },
+        {
+          "name": "PerimeterAndAreaCalculation",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 379
+        },
+        {
+          "name": "InvalidInputResetsResults",
+          "file": "\/Users\/georgebadal\/CSCN71020\/CSCN71020_Group11\/PolygonChecker\/tests\/test_polygon_checker.cpp",
+          "line": 387
+        }
+      ]
+    }
+  ]
+}

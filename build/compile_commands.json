@@ -1,0 +1,44 @@
+[
+{
+  "directory": "/Users/georgebadal/CSCN71020/CSCN71020_Group11/build",
+  "command": "/usr/bin/clang  -I/Users/georgebadal/CSCN71020/CSCN71020_Group11/PolygonChecker -g -std=gnu11 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/polygon_core.dir/triangleSolver.c.o -c /Users/georgebadal/CSCN71020/CSCN71020_Group11/PolygonChecker/triangleSolver.c",
+  "file": "/Users/georgebadal/CSCN71020/CSCN71020_Group11/PolygonChecker/triangleSolver.c",
+  "output": "CMakeFiles/polygon_core.dir/triangleSolver.c.o"
+},
+{
+  "directory": "/Users/georgebadal/CSCN71020/CSCN71020_Group11/build",
+  "command": "/usr/bin/clang  -I/Users/georgebadal/CSCN71020/CSCN71020_Group11/PolygonChecker -g -std=gnu11 -arch arm64 -Wall -Wextra -Wpedantic -o CMakeFiles/polygon_core.dir/four_points.c.o -c /Users/georgebadal/CSCN71020/CSCN71020_Group11/PolygonChecker/four_points.c",
+  "file": "/Users/georgebadal/CSCN71020/CSCN71020_Group11/PolygonChecker/four_points.c",
+  "output": "CMakeFiles/polygon_core.dir/four_points.c.o"
+},
+{
+  "directory": "/Users/georgebadal/CSCN71020/CSCN71020_Group11/build",
+  "command": "/usr/bin/clang++  -I/Users/georgebadal/CSCN71020/CSCN71020_Group11/PolygonChecker -isystem /Users/georgebadal/CSCN71020/CSCN71020_Group11/build/_deps/googletest-src/googletest/include -isystem /Users/georgebadal/CSCN71020/CSCN71020_Group11/build/_deps/googletest-src/googletest -g -std=gnu++17 -arch arm64 -o CMakeFiles/polygon_checker_tests.dir/tests/test_polygon_checker.cpp.o -c /Users/georgebadal/CSCN71020/CSCN71020_Group11/PolygonChecker/tests/test_polygon_checker.cpp",
+  "file": "/Users/georgebadal/CSCN71020/CSCN71020_Group11/PolygonChecker/tests/test_polygon_checker.cpp",
+  "output": "CMakeFiles/polygon_checker_tests.dir/tests/test_polygon_checker.cpp.o"
+},
+{
+  "directory": "/Users/georgebadal/CSCN71020/CSCN71020_Group11/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/clang++  -I/Users/georgebadal/CSCN71020/CSCN71020_Group11/build/_deps/googletest-src/googlemock/include -I/Users/georgebadal/CSCN71020/CSCN71020_Group11/build/_deps/googletest-src/googlemock -isystem /Users/georgebadal/CSCN71020/CSCN71020_Group11/build/_deps/googletest-src/googletest/include -isystem /Users/georgebadal/CSCN71020/CSCN71020_Group11/build/_deps/googletest-src/googletest -g -std=c++17 -arch arm64  -DGTEST_HAS_PTHREAD=1   -o CMakeFiles/gmock.dir/src/gmock-all.cc.o -c /Users/georgebadal/CSCN71020/CSCN71020_Group11/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "file": "/Users/georgebadal/CSCN71020/CSCN71020_Group11/build/_deps/googletest-src/googlemock/src/gmock-all.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o"
+},
+{
+  "directory": "/Users/georgebadal/CSCN71020/CSCN71020_Group11/build/_deps/googletest-build/googlemock",
+  "command": "/usr/bin/clang++  -isystem /Users/georgebadal/CSCN71020/CSCN71020_Group11/build/_deps/googletest-src/googlemock/include -isystem /Users/georgebadal/CSCN71020/CSCN71020_Group11/build/_deps/googletest-src/googlemock -isystem /Users/georgebadal/CSCN71020/CSCN71020_Group11/build/_deps/googletest-src/googletest/include -isystem /Users/georgebadal/CSCN71020/CSCN71020_Group11/build/_deps/googletest-src/googletest -g -std=c++17 -arch arm64  -DGTEST_HAS_PTHREAD=1   -o CMakeFiles/gmock_main.dir/src/gmock_main.cc.o -c /Users/georgebadal/CSCN71020/CSCN71020_Group11/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "file": "/Users/georgebadal/CSCN71020/CSCN71020_Group11/build/_deps/googletest-src/googlemock/src/gmock_main.cc",
+  "output": "_deps/googletest-build/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o"
+},
+{
+  "directory": "/Users/georgebadal/CSCN71020/CSCN71020_Group11/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/clang++  -I/Users/georgebadal/CSCN71020/CSCN71020_Group11/build/_deps/googletest-src/googletest/include -I/Users/georgebadal/CSCN71020/CSCN71020_Group11/build/_deps/googletest-src/googletest -g -std=c++17 -arch arm64  -DGTEST_HAS_PTHREAD=1   -o CMakeFiles/gtest.dir/src/gtest-all.cc.o -c /Users/georgebadal/CSCN71020/CSCN71020_Group11/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "file": "/Users/georgebadal/CSCN71020/CSCN71020_Group11/build/_deps/googletest-src/googletest/src/gtest-all.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o"
+},
+{
+  "directory": "/Users/georgebadal/CSCN71020/CSCN71020_Group11/build/_deps/googletest-build/googletest",
+  "command": "/usr/bin/clang++  -isystem /Users/georgebadal/CSCN71020/CSCN71020_Group11/build/_deps/googletest-src/googletest/include -isystem /Users/georgebadal/CSCN71020/CSCN71020_Group11/build/_deps/googletest-src/googletest -g -std=c++17 -arch arm64  -DGTEST_HAS_PTHREAD=1   -o CMakeFiles/gtest_main.dir/src/gtest_main.cc.o -c /Users/georgebadal/CSCN71020/CSCN71020_Group11/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "file": "/Users/georgebadal/CSCN71020/CSCN71020_Group11/build/_deps/googletest-src/googletest/src/gtest_main.cc",
+  "output": "_deps/googletest-build/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o"
+}
+]

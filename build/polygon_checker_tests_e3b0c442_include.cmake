@@ -1,0 +1,5 @@
+if(EXISTS "/Users/georgebadal/CSCN71020/CSCN71020_Group11/build/polygon_checker_tests_e3b0c442_tests.cmake")
+  include("/Users/georgebadal/CSCN71020/CSCN71020_Group11/build/polygon_checker_tests_e3b0c442_tests.cmake")
+else()
+  add_test(polygon_checker_tests_NOT_BUILT polygon_checker_tests_NOT_BUILT)
+endif()

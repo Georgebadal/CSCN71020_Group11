@@ -1,0 +1,1 @@
+/usr/bin/clang++ -g -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/polygon_checker_tests.dir/tests/test_polygon_checker.cpp.o -o polygon_checker_tests  libpolygon_core.a lib/libgtest_main.a lib/libgtest.a

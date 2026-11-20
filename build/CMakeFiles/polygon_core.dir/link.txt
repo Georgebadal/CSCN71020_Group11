@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpolygon_core.a CMakeFiles/polygon_core.dir/triangleSolver.c.o CMakeFiles/polygon_core.dir/four_points.c.o
+/usr/bin/ranlib libpolygon_core.a
